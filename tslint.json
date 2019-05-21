@@ -9,11 +9,26 @@
     ]
   },
   "rules": {
-    "quotemark": [true, "single"],
-    "indent": [true, "spaces", 2],
+    "max-line-length": false,
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-console": false,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
     "interface-name": false,
+    "quotemark": [true, "single"],
+    "space-before-function-paren": true,
+    "radix": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
+    "variable-name": false,
+    "no-unused-expression": ["error", { "allowShortCircuit": true }],
+    "member-access": [true, "no-public"],
+    "no-shadowed-variable": false,
+    "no-empty": false,
+    "no-var-requires": false,
+    "arrow-parens": false,
+    "no-namespace": [true, "allow-declarations"]
   }
 }

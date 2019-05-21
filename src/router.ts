@@ -1,8 +1,8 @@
+/**
+ * ts 文件中导入vue文件的时候会报错can't find module ... 需要在main.ts目录下新建shims-vue.d.ts去声明vue
+ */
 import Vue from 'vue';
 import Router from 'vue-router';
-// import Home from './views/Home.vue';
-const home = () => import('./views/Home.vue');
-
 Vue.use(Router);
 
 export default new Router({
@@ -12,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: home,
+      component: () => import('./views/Home.vue'),
     },
     {
       path: '/about',
@@ -21,6 +21,11 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+    },
+    {
+      path: '/self',
+      name: 'self',
+      component: () => import('@/views/Self.vue'),
     },
   ],
 });
