@@ -86,7 +86,7 @@
   export default class Self extends Vue {
 
     // @ts-ignore
-    @heroModule.State('initData') heroesList;
+    @heroModule.State('heroList') heroesList;
 
     @heroModule.Action fetchAllHeroes: any;
     @heroModule.Action addHeroAction: any;

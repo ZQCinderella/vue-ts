@@ -3,3 +3,7 @@ export interface Hero {
   age: number;
   weapon: string;
 }
+export interface SelfState {
+  heroList: Hero[];
+}
+

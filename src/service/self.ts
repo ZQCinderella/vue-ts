@@ -13,7 +13,7 @@ export default class SelfService {
         }, {
           name: '张飞',
           age: 20,
-          weapon: '双股剑',
+          weapon: '丈八蛇矛',
         }]);
       }, 300);
     });
